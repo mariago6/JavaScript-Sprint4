@@ -34,8 +34,9 @@ function moviesAverage(array) {
 
 // Exercise 4:  Alphabetic order by title 
 function orderAlphabetically(array) {
-
-
+  let filmsTitle = array.map(film => film.title); 
+  filmsTitle.sort(); 
+  return filmsTitle.slice(0, 20);
 }
 
 // Exercise 5: Order by year, ascending
