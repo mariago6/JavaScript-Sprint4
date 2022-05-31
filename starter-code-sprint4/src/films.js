@@ -42,7 +42,7 @@ function orderAlphabetically(array) {
 // Exercise 5: Order by year, ascending
 function orderByYear(array) {   
   let newArray = [];
-  
+
   if (!array.length) {
     return newArray; 
   }
@@ -68,7 +68,11 @@ function orderByYear(array) {
 
 // Exercise 6: Calculate the average of the movies in a category
 function moviesAverageByCategory(array, genre) {
-
+  let genreFilter = array
+  .filter(item => item.score)
+  .filter(item => item.genre.map(i => i.toLowerCase()).includes(genre.toLowerCase())); 
+  
+  return moviesAverage(genreFilter);
   
 }
 
